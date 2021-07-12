@@ -33,7 +33,7 @@ app.get("/api/config/paypal", (req, res) =>
 
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
-if (proces.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));
 
   app.get("*", (req, res) =>
